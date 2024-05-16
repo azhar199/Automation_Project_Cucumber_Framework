@@ -10,8 +10,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/java/Features",
 		glue= {"StepDefination"},
-		tags="@Test"
-		//plugin = { "pretty", "html:target/cucumber-reports" }
+		tags="@Test",
+		plugin = { "pretty", "html:target/cucumber-reports" }
 		//dryRun = true,
 		//monochrome = true
 		)

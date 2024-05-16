@@ -6,10 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import com.fasterxml.jackson.databind.deser.Deserializers.Base;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginPage extends Base {
@@ -30,12 +27,12 @@ public class LoginPage extends Base {
 	}
 
 	
-	public void enter_correct_username_and_passwords() {
+	public void enter_correct_username_and_passwords(String userName, String PassWord) {
 		WebElement username = driver.findElement(By.xpath("//input[@id='user-name']"));
-		username.sendKeys("standard_user");
+		username.sendKeys(userName);
 
 		WebElement Password = driver.findElement(By.xpath("//input[@id='password']"));
-		Password.sendKeys("secret_sauce");
+		Password.sendKeys(PassWord);
 		
 
 	}
@@ -49,7 +46,7 @@ public class LoginPage extends Base {
 
 
 	public void validate_successful_login() {
-		// assertTrue(driver.findElement(By.xpath("")).isDisplayed());
+		//assertTrue(driver.findElement(By.xpath("")).isDisplayed());
 
 	}
 }

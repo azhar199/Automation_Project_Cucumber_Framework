@@ -17,10 +17,17 @@ public class Login_Step_Defination {
 
 	}
 
-	@When("Enter correct username and password")
-	public void enter_correct_username_and_passwords() {
-		login.enter_correct_username_and_passwords();
-
+	/*
+	 * @When("Enter correct username and password") public void
+	 * enter_correct_username_and_passwords() {
+	 * login.enter_correct_username_and_passwords();
+	 */
+	
+	@When("Enter correct {string} and {string}")
+	public void enter_correct_and(String username, String password)  {
+		login.enter_correct_username_and_passwords(username, password);
+	   
+	
 	}
 
 	@And("Click on login button")
