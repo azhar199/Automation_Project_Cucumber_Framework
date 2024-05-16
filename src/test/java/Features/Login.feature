@@ -1,6 +1,6 @@
 Feature: Login funtionlity
 
-
+@Test
 Scenario: Verify successful login when username and password is correct
 Given User Launch site URL
 When Enter correct username and password

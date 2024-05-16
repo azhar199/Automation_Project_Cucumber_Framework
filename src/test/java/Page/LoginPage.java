@@ -16,7 +16,7 @@ public class LoginPage extends Base {
 	
 	WebDriver driver;
 
-	@Given("User Launch site URL")
+
 	public void user_launch_site_url() {
 
 		WebDriverManager.chromedriver().setup();
@@ -29,8 +29,8 @@ public class LoginPage extends Base {
 
 	}
 
-	@When("Enter correct username and password")
-	public void enter_correct_username_and_password() {
+	
+	public void enter_correct_username_and_passwords() {
 		WebElement username = driver.findElement(By.xpath("//input[@id='user-name']"));
 		username.sendKeys("standard_user");
 
@@ -40,14 +40,14 @@ public class LoginPage extends Base {
 
 	}
 
-	@And("Click on login button")
+	
 	public void click_on_login_button() {
 		WebElement Login = driver.findElement(By.xpath("//input[@id='login-button']"));
 		Login.click();
 
 	}
 
-	@Then("Validate successful login")
+
 	public void validate_successful_login() {
 		// assertTrue(driver.findElement(By.xpath("")).isDisplayed());
 
